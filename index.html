@@ -19,18 +19,66 @@
                 <div class="logo"></div>
             </div>
             <!--Ship to-->
-            <div class="box2" id="box2">
-                <p>Deliver to</p>
+            <div id="box2" class="box2 border">
+                <p class="deliver-to">Deliver to</p>
                 <div class="addicon">
                     <i class="fa-solid fa-location-dot"></i>
-                    <p id="cont"></p>
+                    <p id="cont">USA</p>
                 </div>
+            </div>
+
+            <div class="search border" id="search">
+                <select class="categories" id="categories">
+                    <option value="all">All</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="home">Home & Kitchen</option>
+                    <option value="books">Books</option>
+                    <option value="toys">Toys & Games</option>
+                </select>
+                <input type="text" class="search-box" placeholder="Search Amazon">
+                <div class="magnifying-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="box3" id="box3">
+                <div id="flag-div" class="flag-div"></div>
+
+                <div id="text-div" class="text-div">English</div>
             </div>
         </div>
     </header>
+
     <div class="popup-parent" id="popup-parent">
         <div class="popup">
-            <h3>YOOOO</h3>
+            <div class="lang-and-cont-form">
+                <form action="./" method="get">
+                    <div class="sel-cont-container">
+                        <label for="sel-cont">Country</label>
+                        <input type="text" id="sel-cont" name="sel-cont" placeholder="E.g. Bahamas">
+                    </div>
+                    <br>
+
+                    <div class="sel-lang-container">
+                        <label for="sel-lang">Language</label>
+                        <select id="sel-lang" name="sel-lang">
+                            <option value="english">English</option>
+                            <option value="french">French (français)</option>
+                            <option value="spanish">Spanish (español)</option>
+                            <option value="portugese">Portugese  (português)</option>
+                            <option value="arabic">Arabic (عربي)</option>
+                            <option value="urdu">Urdu (اردو)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="submit-cont-and-lang">
+                        <button type="submit" id="submit-cont-and-lang">Save Changes</button>
+                    </div>
+            </form>
+            </div>
+            
             <div class="popupButton" id="popupButton">X</div>
         </div>
     </div>   
