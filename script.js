@@ -32,21 +32,32 @@ const languageFlags = {
   "urdu": "https://flagcdn.com/w80/pk.png"
 };
 
+const shortenedLang = {
+    "english": "eng",
+    "french": "fre",
+    "spanish": "spa",
+    "portugese": "por",
+    "arabic": "عربي",
+    "urdu": "اردو"
+};
+
 
 submit_cont_and_lang.addEventListener('click', function (e) {
     e.preventDefault();
 
     //Generating Flag
     const flagURL = languageFlags[sel_lang.value];
-    flag_div.style.background = `url(${flagURL})`;
+    flag_div.style.backgroundImage = `url(${flagURL})`;
+    flag_div.className = 'flag-div';
 
     Country.textContent = sel_cont.value;
-    text_div.textContent = sel_lang.value;
+    text_div.textContent = shortenedLang[sel_lang.value].toUpperCase();
     popup_parent.style.display = 'none';
 });
 
 window.addEventListener('DOMContentLoaded', function () {
     const flagURL = languageFlags["english"];
-    flag_div.style.background = `url(${flagURL})`;
+    flag_div.style.backgroundImage = `url(${flagURL})`;
     flag_div.className = 'flag-div';
+    text_div.textContent = shortenedLang[sel_lang.value].toUpperCase();
 });
