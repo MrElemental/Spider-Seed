@@ -1,11 +1,12 @@
 /*Computers*/
-@media (min-aspect-ratio: 9/9) {
+@media (min-aspect-ratio: 1/10) {
     * {
         margin: 0;
         font-family: arial;
         border: border-box;
     }
 
+    /*Navigation Bar*/
     .navbar {
         height: 3.8rem;
         background-color: #0F1111;
@@ -17,7 +18,10 @@
 
     .navlogo {
         height: 85%;
-        width: 6rem;
+        width: 5rem;
+
+        display: flex;
+        align-items: center;
     }
 
     .logo {
@@ -25,8 +29,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        height: 50px;
-        width: 100px;
+        height: 37.5px;
+        width: 75px;
 
         background-color: transparent;
         box-shadow: 0.2rem 0.2rem 0.4rem black;
@@ -38,8 +42,8 @@
     }
 
     .box2 {
-        width: 7rem;
-        height: 80%;
+        width: 8rem;
+        height: 60%;
         display: grid;
         align-items: center;
         justify-content: space-evenly;
@@ -50,11 +54,16 @@
 
     .text-for-shipping{
         transform: translate(0.2rem);
+
+        font-weight: bold;
+        font-size: 0.9rem;
     }
 
     .deliver-to {
         transform: translate(0.4rem);
         transition: all 0.3s ease;
+
+        font-size: 0.8rem;
     }
     .box2:hover .deliver-to{
         transform: translate(-0.4rem);
@@ -66,24 +75,30 @@
 
     .search {
         width: 100%;
-        height: 75%;
+        height: 55%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
 
     .search-box {
-        height: 87%;
+        height: 82%;
         width: 100%;
 
         color: #0F1111;
-        font-size: 1.3rem;
+        font-size: 1rem;
+    }
+    .search:hover {
+        border: 0.15rem solid #ffb300;
+        padding-left: 0.02rem;
+        padding-right: 0.02rem;
+        border-radius: 0.7rem;
     }
 
     .magnifying-icon {
-        background-color: rgb(255, 225, 0);
+        background-color: rgb(255, 230, 41);
         height: 95%;
-        width: 2.2rem;
+        width: 2rem;
         border-top-right-radius: 15%;
         border-bottom-right-radius: 15%;
 
@@ -92,7 +107,7 @@
         justify-content: space-evenly;
 
         color: #0F1111;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
 
         transition: all 0.5s ease;
     }
@@ -100,12 +115,12 @@
 
     .categories {
         height: 100%;
-        width: 3rem;
+        width: 2.5rem;
         background-color: #f1efef;
         border-top-left-radius: 15%;
         border-bottom-left-radius: 15%;
 
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #5d5d5d;
 
         transition: all 0.2s ease;
@@ -113,7 +128,7 @@
     .categories:hover {color: #0F1111; background-color: #aeaeae;}
 
     .box3 {
-        width: 8rem;
+        width: auto;
         height: auto;
         display: flex;
         align-items: flex-end;
@@ -122,8 +137,8 @@
     }
 
     .flag-div {
-        width: 2rem;
-        height: 2rem;
+        width: 1.6rem;
+        height: 1.6rem;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -132,25 +147,175 @@
     }
 
     .text-div {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: bolder;
         text-shadow: 0.2rem 0.2rem 0.4rem black;
 
+        transform: translate(0, 0.2rem);
         transition: all 0.3s;
     }
     .box3:hover .text-div {
-        transform: translate(0, -0.5rem);
+        transform: translate(0, -0.4rem);
+    }
+
+    .box4 {
+        height: 60%;
+        width: 14rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .small-text {
+        font-size: 0.7rem;
+    }
+
+    .bold-text {
+        font-size: 0.78rem;
+        font-weight: bolder;
+    }
+
+    .box5 {
+        height: 60%;
+        width: 7rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box6 {
+        height: 70%;
+        width: 7rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .box6 i {
+        font-size: 2.5rem;
+    }
+
+    .items-in-cart {
+        color: #ffbf00;
+        text-shadow: 0.1rem 0.1rem 0.2rem black;
+        font-size: 1.3rem;
+
+        position: relative;
+        transform: translate(1.8rem, -0.5rem);
+    }
+
+    /*Panel*/
+    .panel {
+        width: 100%;
+        height: 2.4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #222F3D;
+
+        color: #F3F3F3;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .panel-options {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    .panel-options a {
+        border: content-box;
+        margin: 0.5rem;
+        font-size: 0.9rem;
+        height: 80%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .panel-all-cat {
+        height: 80%;
+        width: 8rem;
+        display: flex;
+        align-items: center;
+
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: monospace;
+    }
+
+    .panel-all-cat i {
+        margin: 0.5rem;
+    }
+
+    .panel-deals {
+        height: 75%;
+        width: 24rem;
+        display: flex;
+        align-items: center;
+
+        font-size: 1.05rem;
+        font-weight: 550;
+    }
+
+    /*Hero Section*/
+    .hero-section-div {
+        width: 100%;
+        height: 65vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-image-div {
+        background-image: url("hero_image.jpg");
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+
+        -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent);
+        mask-image: linear-gradient(to bottom, black 50%, transform);        
+    }
+
+    .hero-message {
+        background-color: white;
+        color: #0F1111;
+        height: 3rem;
+        width: 80%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+
+        font-size: 0.85rem;
+        z-index: 3;
+        position: relative;
+        bottom: 18rem;
     }
 
     .border {
-        border: 0.2rem solid transparent;
+        border: 0.15rem solid transparent;
         border: border-box;
         margin: 0.1rem;
 
         transition: all 0.2s ease;
     }
     .border:hover{
-        border: 0.2rem solid #F3F3F3;
+        border: 0.15rem solid #F3F3F3;
         border-radius: 0.2rem;
     }
 
@@ -278,305 +443,6 @@
     }
 
     .submit-note-for-popup {
-        text-align: center;
-        font-weight: bold;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        color: #ffffff;
-        text-shadow: 0.2rem 0.2rem 0.4rem black;
-
-        transform: translate(0, 2rem);
-        transition: all 0.3s;
-    }
-}
-
-
-/*Mobile Devices*/
-@media (max-aspect-ratio: 9/9) {
-    * {
-        margin: 0;
-        font-family: arial;
-        border: border-box;
-        font-size: 12px;
-    }
-
-    .navbar {
-        height: 4.8rem;
-        background-color: #0F1111;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        color: #F3F3F3;
-    }
-
-    .navlogo {
-        height: 85%;
-        width: 5rem;
-    }
-
-    .logo {
-        background-image: url("amazon_logo.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 90%;
-        width: 6rem;
-
-        background-color: transparent;
-        box-shadow: 0.2rem 0.2rem 0.4rem black;
-        transition: all 0.4s ease;
-    }
-    .navlogo:hover .logo{
-        transform: scale(1.5);
-        background-color: rgba(36, 36, 255, 0.712);
-    }
-
-    .box2 {
-        width: 10rem;
-        height: 80%;
-        display: grid;
-        align-items: center;
-        justify-content: space-evenly;
-
-        white-space: nowrap;
-        overflow: hidden;
-    }
-
-    .text-for-shipping{
-        font-weight: bolder;
-        font-size: 1.2rem;
-        transform: translate(0.2rem);
-    }
-
-    .deliver-to {
-        transform: translate(0.4rem);
-        transition: all 0.3s ease;
-    }
-    .box2:hover .deliver-to{
-        transform: translate(-0.4rem);
-    }
-
-    .addicon {
-        display: flex;
-    }
-
-    .search {
-        width: 100%;
-        height: 65%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    .search-box {
-        height: 87%;
-        width: 100%;
-
-        color: #0F1111;
-        font-size: 1rem;
-    }
-
-    .magnifying-icon {
-        background-color: rgb(255, 225, 0);
-        height: 95%;
-        width: 2.2rem;
-        border-top-right-radius: 15%;
-        border-bottom-right-radius: 15%;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-
-        color: #0F1111;
-        font-size: 1.3rem;
-
-        transition: all 0.5s ease;
-    }
-    .magnifying-icon:hover {background-color: rgb(255, 183, 0);}
-
-    .categories {
-        height: 100%;
-        width: 2.9rem;
-        background-color: #f1efef;
-        border-top-left-radius: 15%;
-        border-bottom-left-radius: 15%;
-
-        font-size: 1rem;
-        color: #5d5d5d;
-
-        transition: all 0.2s ease;
-    }
-    .categories:hover {color: #0F1111; background-color: #aeaeae;}
-
-    .box3 {
-        width: 6rem;
-        height: auto;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        margin-top: 0.5rem;
-    }
-
-    .flag-div {
-        width: 1.8rem;
-        height: 1.8rem;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        border-radius: 50%;
-        box-shadow: 0.2rem 0.2rem 0.4rem black;
-    }
-
-    .text-div {
-        font-size: 1rem;
-        font-weight: bolder;
-        text-shadow: 0.2rem 0.2rem 0.4rem black;
-
-        transition: all 0.3s;
-    }
-    .box3:hover .text-div {
-        transform: translate(0, -0.5rem);
-    }
-
-    .border {
-        border: 0.2rem solid transparent;
-        border: border-box;
-        margin: 0.1rem;
-
-        transition: all 0.2s ease;
-    }
-    .border:hover{
-        border: 0.2rem solid #F3F3F3;
-        border-radius: 0.2rem;
-    }
-
-    .popup-parent {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .popup {
-        width: 25rem;
-        height: 35rem;
-        background: linear-gradient(to right, white, #dedede);
-        border: 6px solid #e3e3e3;
-        border-radius: 3rem;
-        box-shadow: 0.5rem 0.5rem 1rem black;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-
-        padding: 20px;
-        z-index: 999;
-    }
-
-    .popupButton {
-        width: 2rem;
-        height: 2rem;
-        background-color: rgba(255, 0, 0, 0.5);
-        border: 2px solid black;
-        border-radius: 25%;
-
-        font-weight: bolder;
-        font-size: 1.5rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-
-        position: absolute;
-        bottom: 34.5rem;
-        left: 24.5rem;
-
-        transition: transform 0.3s ease;
-    }
-
-    .popupButton:hover {
-        transform: scale(1.6);
-    }
-
-    .lang-and-cont-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        width: 18rem;
-        height: 25rem;
-        background: radial-gradient(circle at center, green, rgba(1, 1, 1, 0) 70%);
-        background-position: relative;
-        background-repeat: no-repeat;
-
-        color: #0F1111;
-        font-weight: bold;
-        text-shadow: 0.2rem 0.2rem 0.4rem aqua;
-
-        transition: all 0.6s ease;
-    }
-    .lang-and-cont-form:hover {
-        background-position: 10rem 10rem;
-        transform: scale(1.5);
-        transition: all 0.3s ease;
-        text-shadow: 0.2rem 0.2rem 0.4rem rgb(0, 81, 255);
-    }
-
-    .popup-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-
-        height: 8rem;
-        font-size: 2rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .submit-cont-and-lang {
-        height: 2rem;
-    }
-    #submit-cont-and-lang {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: bolder;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        box-shadow: 0.2rem 0.2rem 0.4rem black;
-    }
-
-
-    .sel-lang-container {
-        height: 1.6rem;
-    }
-    #sel-lang {
-        height: 100%;
-        width: 11.5rem;
-        font-size: 1.2rem;
-        font-weight: bolder;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        box-shadow: 0.2rem 0.2rem 0.4rem black;
-    }
-
-    .sel-cont-container {
-        height: 1.6rem;
-    }
-    #sel-cont {
-        height: 100%;
-        width: 11.5rem;
-        font-size: 1.2rem;
-        font-weight: bolder;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        box-shadow: 0.2rem 0.2rem 0.4rem black;
-    }
-
-    .submit-note-for-popup {
-        font-size: 2rem;
         text-align: center;
         font-weight: bold;
         font-family: Georgia, 'Times New Roman', Times, serif;
