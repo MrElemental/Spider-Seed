@@ -6,13 +6,16 @@ const popupButton = document.getElementById('popupButton');
 
 deliverto.addEventListener('click', function() {
     popup_parent.style.display = 'flex';
+    popup_parent.style.zIndex = '999';
 });
 box3.addEventListener('click', function() {
     popup_parent.style.display = 'flex';
+    popup_parent.style.zIndex = '999';
 });
 
 popupButton.addEventListener('click', function() {
     popup_parent.style.display = 'none';
+    popup_parent.style.zIndex = '999';
 });
 
 //Code Block for Updating Country+Language
@@ -60,4 +63,14 @@ window.addEventListener('DOMContentLoaded', function () {
     flag_div.style.backgroundImage = `url(${flagURL})`;
     flag_div.className = 'flag-div';
     text_div.textContent = shortenedLang[sel_lang.value].toUpperCase();
+});
+
+//Code block for ranodomizing Shop Deals Message
+panelDeals = document.getElementById('panel-deals');
+
+const categories_available = ["laptops", "electronics", "fashion", "home", "books", "toys", "gaming", "supplies"];
+const randomPanelDeals = categories_available[Math.floor(Math.random() * categories_available.length)];
+
+window.addEventListener('DOMContentLoaded', function () {
+    panelDeals.textContent = `Shop deals in ${randomPanelDeals}`;
 });
