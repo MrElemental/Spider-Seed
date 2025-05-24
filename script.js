@@ -74,3 +74,25 @@ const randomPanelDeals = categories_available[Math.floor(Math.random() * categor
 window.addEventListener('DOMContentLoaded', function () {
     panelDeals.textContent = `Shop deals in ${randomPanelDeals}`;
 });
+
+//Code Block for when button clicked, hero image changes
+const angle_left = document.getElementById('angle-left');
+const angle_right = document.getElementById('angle-right');
+const hero_image_div = document.getElementById('hero-image-div');
+
+let hero_img_index = 0;
+const hero_img_arr = [1, 2, 3, 4];
+
+angle_right.addEventListener('click', function () {
+    hero_img_index = (hero_img_index + 1) % hero_img_arr.length;
+    hero_image_div.style.backgroundImage = `url(hero_image${hero_img_arr[hero_img_index]}.jpg)`;
+});
+
+angle_left.addEventListener('click', function () {
+    hero_img_index = (hero_img_index - 1 + hero_img_arr.length) % hero_img_arr.length;
+    hero_image_div.style.backgroundImage = `url(hero_image${hero_img_arr[hero_img_index]}.jpg)`;
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    hero_image_div.style.backgroundImage = 'url(hero_image1.jpg)';
+});
